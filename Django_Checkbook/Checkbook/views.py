@@ -27,7 +27,7 @@ def balanceSheet(request, pk):
         if t.type == 'deposit':
             current_total += t.amount
             table_contents.update({t: current_total})
-        else:
+        elif t.type == 'withdrawal':
             current_total -= t.amount
             table_contents.update({t: current_total})
 
